@@ -1,20 +1,15 @@
 import React from 'react';
-import './App.css';
-import EnhancedTable from './components/EnhancedTable';
-import Header from './components/Header';
-
-const useStyles = {
-  app: {
-      padding: '4em',
-  },
-};
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Home from './components/Home';
 
 function App() {
+  
   return (
-    <div className="App" style={useStyles.app}>
-      <Header />
-      <EnhancedTable />
-    </div>
+    <Router>
+      <div>
+        <Route exact path="/" component={Home} />
+      </div>
+    </Router>
   );
 }
 
